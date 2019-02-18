@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="950.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DIY2.UI">
+   <children>
+      <DatePicker fx:id="dp1" layoutX="67.0" layoutY="20.0" />
+      <DatePicker fx:id="dp2" layoutX="347.0" layoutY="20.0" />
+      <ComboBox fx:id="cb" layoutX="109.0" layoutY="117.0" prefWidth="150.0" />
+      <TabPane layoutX="100.0" layoutY="224.0" prefHeight="563.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="211.0">
+        <tabs>
+            <Tab text="Information">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="table" layoutX="43.0" layoutY="82.0" prefHeight="524.0" prefWidth="809.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <columns>
+                              <TableColumn fx:id="ageCol" prefWidth="247.0" text="Date" />
+                              <TableColumn fx:id="nameCol" minWidth="50.0" prefWidth="278.0" text="Region" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Chart_plates">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <BarChart fx:id="bc" layoutX="179.0" layoutY="145.0" prefHeight="690.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <xAxis>
+                            <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis fx:id="yAxis" side="LEFT" />
+                          </yAxis>
+                        </BarChart>
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Chart_Day">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="463.0" prefWidth="561.0" />
+               </content>
+            </Tab>
+            <Tab text="Map">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="search" layoutX="420.0" layoutY="125.0" mnemonicParsing="false" onMouseClicked="#search" text="search" />
+      <Label fx:id="minlb" layoutX="580.0" layoutY="78.0" />
+   </children>
+</AnchorPane>
